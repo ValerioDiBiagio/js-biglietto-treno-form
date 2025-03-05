@@ -15,7 +15,16 @@ infoForm.addEventListener('submit', function(event) {
 
     console.log(fullTicketPrice(kmAmount, userAge));
 
+    const ticketPrice = fullTicketPrice(kmAmount, userAge);
+
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = fullTicketPrice(kmAmount, userAge)
+    const divElement = document.querySelector('.totalPrice');
+    divElement.appendChild(newDiv);
+
 })
+
+
 
 
 
